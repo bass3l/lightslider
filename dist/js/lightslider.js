@@ -1,6 +1,6 @@
-/*! lightslider - v1.1.6 - 2016-10-25
+/*! lightslider-rtl - v1.1.6 - 2018-01-20
 * https://github.com/sachinchoolur/lightslider
-* Copyright (c) 2016 Sachin N; Licensed MIT */
+* Copyright (c) 2018 bass3l; Licensed MIT */
 (function ($, undefined) {
     'use strict';
     var defaults = {
@@ -201,10 +201,16 @@
                         } else {
                             e.returnValue = false;
                         }
-                        if ($(this).attr('class') === 'lSPrev') {
-                            $el.goToPrevSlide();
+                        if ($(this).hasClass('lSPrev')) {
+                            if(settings.rtl === true)
+                                $el.goToNextSlide();
+                            else                            
+                                $el.goToPrevSlide();
                         } else {
-                            $el.goToNextSlide();
+                            if(settings.rtl === true)
+                                $el.goToPrevSlide();
+                            else
+                                $el.goToNextSlide();
                         }
                         return false;
                     });
@@ -670,6 +676,10 @@
                 $slide.css('transition-duration', '0ms');
                 if (settings.mode === 'slide') {
                     var distance = endCoords - startCoords;
+
+                    if(settings.rtl === true)
+                        distance = -distance;
+
                     var swipeVal = slideValue - distance;
                     if ((swipeVal) >= w - elSize - settings.slideMargin) {
                         if (settings.freeMove === false) {
@@ -695,6 +705,10 @@
                 if (settings.mode === 'slide') {
                     var mxVal = false;
                     var _next = true;
+
+                    if(settings.rtl === true)
+                        distance = -distance;
+
                     slideValue = slideValue - distance;
                     if ((slideValue) > w - elSize - settings.slideMargin) {
                         slideValue = w - elSize - settings.slideMargin;
@@ -782,7 +796,11 @@
                     $(window).on('mousemove', function (e) {
                         if (isDraging) {
                             endCoords = (settings.vertical === true) ? e.pageY : e.pageX;
-                            $this.touchMove(endCoords, startCoords);
+
+                            if(settings.rtl === true)
+                                $this.touchMove(startCoords, endCoords);
+                            else
+                                $this.touchMove(endCoords, startCoords);
                         }
                     });
                     $(window).on('mouseup', function (e) {

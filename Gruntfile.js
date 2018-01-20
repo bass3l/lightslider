@@ -23,12 +23,12 @@ module.exports = function (grunt) {
                 banner: '<%= banner %>',
             },
             basic: {
-              src: ['src/js/<%= pkg.name %>.js'],
-              dest: 'dist/js/<%= pkg.name %>.js'
+              src: ['src/js/lightslider.js'],
+              dest: 'dist/js/lightslider.js'
             },
             extras: {
-              src: ['src/css/<%= pkg.name %>.css'],
-              dest: 'dist/css/<%= pkg.name %>.css'
+              src: ['src/css/lightslider.css'],
+              dest: 'dist/css/lightslider.css'
             }
         },
         uglify: {
@@ -36,8 +36,8 @@ module.exports = function (grunt) {
                 banner: '<%= banner %>'
             },
             dist: {
-                src: 'src/js/<%= pkg.name %>.js',
-                dest: 'dist/js/<%= pkg.name %>.min.js'
+                src: 'src/js/lightslider.js',
+                dest: 'dist/js/lightslider.min.js'
             }
         },
         cssmin: {

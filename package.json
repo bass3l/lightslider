@@ -1,6 +1,6 @@
 {
-    "name": "lightslider",
-    "description": "jQuery lightSlider is a lightweight responsive content slider - carousel with animated thumbnails navigation",
+    "name": "lightslider-rtl",
+    "description": "jQuery lightSlider is a lightweight responsive content slider - carousel with animated thumbnails navigation with RTL Support",
     "version": "1.1.6",
     "keywords": [
         "slider",
@@ -21,17 +21,17 @@
     ],
     "main": "dist/js/lightslider.js",
     "author": {
-        "name": "Sachin N",
-        "email": "sachi77n@gmail.com",
-        "url": "https://github.com/sachinchoolur"
+        "name": "bass3l",
+        "email": "bass3l@gmail.com",
+        "url": "https://github.com/bass3l"
     },
     "homepage": "https://github.com/sachinchoolur/lightslider",
     "repository": {
         "type": "git",
-        "url": "https://github.com/sachinchoolur/lightslider.git"
+        "url": "https://github.com/bass3l/lightslider.git"
     },
     "bugs": {
-        "url": "https://github.com/sachinchoolur/lightslider/issues"
+        "url": "https://github.com/bass3l/lightslider/issues"
     },
     "license": {
         "type": "MIT",

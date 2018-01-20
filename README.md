@@ -1,3 +1,15 @@
+# DISCLAIMER
+This repo was forked from [JQuery lightSlider demo](http://sachinchoolur.github.io/lightslider/). I just fixed the RTL bug in touch and control buttons, and published this version on bower for my own use.
+
+All work is for its respectful owner.
+
+You can Install lightslider-rtl using the [Bower](http://bower.io) package manager.
+
+```sh
+$ bower install lightslider-rtl
+```
+============
+
 ![license](https://img.shields.io/npm/l/lightslider.svg)
 ![travis](https://travis-ci.org/sachinchoolur/lightslider.svg?branch=master)
 ![bower](https://img.shields.io/bower/v/lightslider.svg)
